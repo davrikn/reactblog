@@ -5,7 +5,10 @@ const initialState = {
         {
             poster: "David",
             html: "<h2>The post and other stuff</h2>"
-        },
+        }, {
+            poster: "Markus",
+            html: "<h2>mmmmmmm beans</h2>"
+        }
     ]
 };
 
