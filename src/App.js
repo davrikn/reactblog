@@ -9,7 +9,7 @@ function App() {
     return (
     <div className="App">
         <h1>sugmeg</h1>
-        {blogs.map(blog =>{
+        {blogs.map(blog => {
             return (
                 <h1>{blog.poster}</h1>
             )
