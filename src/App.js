@@ -7,10 +7,10 @@ import Details from "./pages/articleDetails/details";
 import Home from "./pages/home/home";
 import NewBlog from "./pages/newBlogForm/newBlog";
 import NavBar from "./components/navBar/navBar";
-import {details, home, newBlog} from "./pages/pagePaths";
+import {details, home, newBlog, searchPage} from "./pages/pagePaths";
 import {NotFound} from "./pages/errorPages/errorPages";
 import { Link } from "react-router-dom";
-
+import SearchPage from "./pages/searchPage/searchPage";
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
         <Switch>
             <Redirect exact from="/" to={home} />
 
+            <Route exact path={searchPage} component={SearchPage} />
             <Route exact path={home} component={Home} />
             <Route exact path={details} component={Details}/>
             <Route exact path={newBlog} component={NewBlog} />

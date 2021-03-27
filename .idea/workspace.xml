@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e00486b-9bb7-48a8-89b8-4783490a6680" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/searchPage/searchPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/article/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navBar/navBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navBar/navBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/blogActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/blogActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/blogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/blogReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pagePaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pagePaths.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616801685522</updated>
       <workItem from="1616801688252" duration="4137000" />
-      <workItem from="1616853346770" duration="19801000" />
+      <workItem from="1616853346770" duration="20746000" />
     </task>
     <servers />
   </component>

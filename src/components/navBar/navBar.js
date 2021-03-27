@@ -1,12 +1,17 @@
 import React, {useState} from "react";
 import {NavLink, Link} from "react-router-dom";
 import {home, newBlog} from "../../pages/pagePaths";
-import {ReactDOM} from "react-dom";
+import { useHistory } from "react-router-dom";
+
 
 export default function NavBar() {
     const [searchword, setSearchword] = useState("");
+    let history = useHistory();
 
-    const search = () => {}
+    const search = () => {
+        let url = "/search/" + searchword;
+        history.push(url)
+    }
 
 
     return (
@@ -28,7 +33,7 @@ export default function NavBar() {
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
-                    <input value={searchword} onChange={(e) => setSearchword(e.target.value)} className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <input value={searchword} onChange={(e) => setSearchword(e.target.value)} className=" mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
                         <button onClick={search} className="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
                 </form>
             </div>
