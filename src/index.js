@@ -15,7 +15,6 @@ const rootReducer = combineReducers({
 )
 
 const reduxStore = createStore(rootReducer, compose(applyMiddleware(thunk)))
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={reduxStore}>

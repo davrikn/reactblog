@@ -1,15 +1,8 @@
 import {addBlog} from "../actionTypes";
 
 const initialState = {
-    blogs: [
-        {
-            poster: "David",
-            html: "<h2>The post and other stuff</h2>"
-        }, {
-            poster: "Markus",
-            html: "<h2>mmmmmmm beans</h2>"
-        }
-    ]
+    counter: 0,
+    blogs: []
 };
 
 export default function blogReducer(state = initialState, action) {
@@ -17,9 +10,14 @@ export default function blogReducer(state = initialState, action) {
         case addBlog:
             return {
                 ...state,
+                counter: state.counter + 1,
                 blogs: [
                     ...state.blogs,
-                    action.blog
+                    {
+                        poster: action.blog.poster,
+                        html: action.blog.html,
+                        id: state.counter
+                    }
                 ]
             };
 
