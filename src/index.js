@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import BlogReducer from "./store/reducers/blogReducer";
 import thunk from 'redux-thunk';
+import { BrowserRouter } from "react-router-dom";
 
 const rootReducer = combineReducers({
         blog: BlogReducer,
@@ -18,7 +19,9 @@ const reduxStore = createStore(rootReducer, compose(applyMiddleware(thunk)))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={reduxStore}>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
