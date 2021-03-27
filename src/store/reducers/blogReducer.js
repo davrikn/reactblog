@@ -1,4 +1,4 @@
-import {addBlog} from "../actionTypes";
+import {addBlogAction, removeBlogAction} from "../actionTypes";
 
 const initialState = {
     counter: 0,
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function blogReducer(state = initialState, action) {
     switch (action.type) {
-        case addBlog:
+        case addBlogAction:
             return {
                 ...state,
                 counter: state.counter + 1,
@@ -20,6 +20,13 @@ export default function blogReducer(state = initialState, action) {
                     }
                 ]
             };
+
+        case removeBlogAction:
+            return {
+                ...state,
+                blogs: state.blogs.filter((blog) => blog.id != action.blog.id)
+            }
+
 
         default:
             return state
