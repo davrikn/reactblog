@@ -3,16 +3,22 @@ import {useDispatch} from "react-redux";
 import {addBlog} from "../../store/actions/blogActions";
 
 export default function NewBlog() {
+    const [image, setImage] = useState("")
     const [poster, setPoster] = useState("");
-    const [html, setHTML] = useState("")
+    const [title, setTitle] = useState("")
+    const [summary, setSummary] = useState("")
+    const [mainPost, setMainPost] = useState("")
     const dispatch = useDispatch();
 
 
 
     const handleClick = () => {
         const blog = {
+            image: image,
             poster: poster,
-            html: html
+            title: title,
+            summary: summary,
+            mainPost: mainPost
         }
 
         dispatch(addBlog(blog));
@@ -21,28 +27,55 @@ export default function NewBlog() {
     return (
         <form>
             <div className="form-group">
-                <label>Poster</label>
+                <label>Image</label>
                 <input type="text"
                        className="form-control"
-                       placeholder="Enter poster"
-                       value={poster}
-                       onChange={(e) => setPoster(e.target.value)}
+                       placeholder="Image URL"
+                       value={image}
+                       onChange={(e) => setImage(e.target.value)}
 
                 />
             </div>
             <div className="form-group">
-                <label>Post HTML</label>
+                <label>Poster</label>
                 <input type="text"
                        className="form-control"
-                       placeholder="Raw post html"
-                       value={html}
-                       onChange={(e) => setHTML(e.target.value)}
+                       placeholder="Name of poster"
+                       value={poster}
+                       onChange={(e) => setPoster(e.target.value)}
+                />
+            </div>
+            <div className="form-group">
+                <label>Title</label>
+                <input type="text"
+                       className="form-control"
+                       placeholder="Title of post"
+                       value={title}
+                       onChange={(e) => setTitle(e.target.value)}
+                />
+            </div>
+            <div className="form-group">
+                <label>Summary</label>
+                <input type="text"
+                       className="form-control"
+                       placeholder="Summary/undertitle of post"
+                       value={summary}
+                       onChange={(e) => setSummary(e.target.value)}
+                />
+            </div>
+            <div className="form-group">
+                <label>Main Post</label>
+                <textarea type="text"
+                       className="form-control"
+                       placeholder="Main post"
+                       value={mainPost}
+                       onChange={(e) => setMainPost(e.target.value)}
                 />
             </div>
 
             <div className="btn btn-primary"
                     onClick={handleClick}
-            >Submit</div>
+            >Submit Post</div>
         </form>
     )
 }

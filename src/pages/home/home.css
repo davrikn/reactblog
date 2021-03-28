@@ -1,0 +1,50 @@
+.blog-container {
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0px 40px;
+    background: white;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.blog-container > img {
+    width: 100%;
+}
+
+h1{
+    font-size: 30px;
+    margin: 10px;
+}
+
+h2{
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0px 20px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.blog-container .bottom-info{
+    margin: 50px 20px;
+}
+
+.blog-container h3{
+    position: absolute;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 15px;
+    bottom: 5px;
+    left: 15px;
+}
+
+.blog-container h4{
+    position: absolute;
+    font-weight: normal;
+    font-size: 15px;
+    bottom: 5px;
+    right: 15px;
+}

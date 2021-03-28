@@ -6,7 +6,9 @@ const initialState = {
 };
 
 export default function blogReducer(state = initialState, action) {
+
     switch (action.type) {
+
         case addBlogAction:
             return {
                 ...state,
@@ -15,7 +17,10 @@ export default function blogReducer(state = initialState, action) {
                     ...state.blogs,
                     {
                         poster: action.blog.poster,
-                        html: action.blog.html,
+                        mainPost: action.blog.mainPost,
+                        image: action.blog.image,
+                        summary: action.blog.summary,
+                        title: action.blog.title,
                         id: state.counter
                     }
                 ]

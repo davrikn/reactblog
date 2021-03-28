@@ -1,3 +1,4 @@
+import './article.css';
 import {useHistory} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {removeBlog} from "../../store/actions/blogActions";

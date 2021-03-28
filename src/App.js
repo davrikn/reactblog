@@ -23,24 +23,16 @@ function App() {
     <div className="App">
 
         <NavBar />
-
-        {blogs.map(blog => {
-            return (
-                <div>
-                    <h1>{blog.poster}</h1>
-                    <Link to={"/details/" + blog.id} ><h1>{blog.id}</h1></Link>
-                </div>
-        )
-        })}
+        <div class="main-container">
         <Switch>
             <Redirect exact from="/" to={home} />
-
             <Route exact path={searchPage} component={SearchPage} />
             <Route exact path={home} component={Home} />
             <Route exact path={details} component={Details}/>
             <Route exact path={newBlog} component={NewBlog} />
             <Route path="/" component={NotFound}/>
         </Switch>
+        </div>
 
 
     </div>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {NavLink, Link} from "react-router-dom";
 import {home, newBlog} from "../../pages/pagePaths";
 import { useHistory } from "react-router-dom";
+import "./navBar.css";
 
 
 export default function NavBar() {
@@ -29,7 +30,7 @@ export default function NavBar() {
                         <NavLink className="nav-link" activeClassName={"active"} to={home}>Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" activeClassName={"active"} to={newBlog}>Create new blog-post</NavLink>
+                        <NavLink className="nav-link" activeClassName={"active"} to={newBlog}>New Post</NavLink>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
