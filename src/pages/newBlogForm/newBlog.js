@@ -13,6 +13,7 @@ export default function NewBlog() {
 
 
 
+
     const handleClick = () => {
         const blog = {
             image: image,
@@ -24,20 +25,20 @@ export default function NewBlog() {
 
         dispatch(addBlog(blog));
         setAddedBlog(true);
+        setTimeout(() => {setAddedBlog(false)},2000);
 
         setImage("");
         setPoster("");
         setTitle("");
         setSummary("");
         setMainPost("");
-
-        //TODO make addedblog untrue after a second asynchronously
-        setAddedBlog(false);
     }
 
     return (
         <div>
-            {addedBlog ? (<p id="blog-added">Successfully added blog</p>) : null}
+            {addedBlog ? (
+                <p className="bg-primary" style={{color:"white"}} id="blog-added">Successfully added blog</p>
+            ) : (<p>Add blog</p>)}
             <form>
                 <div className="form-group">
                     <label>Image</label>
