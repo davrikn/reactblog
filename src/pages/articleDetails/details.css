@@ -1,9 +1,7 @@
-.blog-container {
-    min-width: 300px;
-    max-width: 600px;
+.blog-container-full {
+    width: 70%;
     margin: 0px 40px;
     background: white;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     height: 100%;
     text-decoration: none;
     color: black;
@@ -11,12 +9,22 @@
     position: relative;
 }
 
-#link-element{
-    text-decoration: none;
+.main-container{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
 }
 
-.blog-container > img {
+.blog-container-full > img {
     width: 100%;
+    max-width: 1440px;
+    min-width: 400px;
+}
+
+.btn.btn-danger {
+    float: right;
+    position: relative;
+    top: 10px;
 }
 
 h1{
@@ -27,16 +35,14 @@ h1{
 h2{
     font-weight: normal;
     font-size: 20px;
-    margin: 0px 20px;
-    max-height: 200px;
-    overflow: hidden;
+    margin: 0px 0px;
 }
 
-.blog-container .bottom-info{
+.blog-container-full .bottom-info{
     margin: 50px 20px;
 }
 
-.blog-container h3{
+.blog-container-full h3{
     position: absolute;
     font-weight: normal;
     font-style: italic;
@@ -45,7 +51,7 @@ h2{
     left: 15px;
 }
 
-.blog-container h4{
+.blog-container-full h4{
     position: absolute;
     font-weight: normal;
     font-size: 15px;

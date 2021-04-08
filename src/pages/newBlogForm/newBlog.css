@@ -1,0 +1,10 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+#form{
+    width: 70%;
+    max-width: 1000px;
+}

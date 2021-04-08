@@ -12,16 +12,17 @@ export default function Home() {
 
     return (
     blogs.map(blog => {
-        return (
+        return (<Link to={"/details/" + blog.id} id="link-element">
             <div class="blog-container">
                 <img src={blog.image}/>
                 <h1>{blog.title}</h1>
                 <h2>{blog.summary}</h2>
                 <div class="bottom-info">
                     <h3>{blog.poster}</h3>
-                    <Link to={"/details/" + blog.id} ><h4>{blog.id}</h4></Link>
+                    <h4>{blog.id}</h4>
                 </div>
             </div>
+        </Link>
         )
     })
     )

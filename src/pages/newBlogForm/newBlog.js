@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {addBlog} from "../../store/actions/blogActions";
+import './newBlog.css';
 
 export default function NewBlog() {
     const [image, setImage] = useState("");
@@ -35,7 +36,7 @@ export default function NewBlog() {
     }
 
     return (
-        <div>
+        <div id="form">
             {addedBlog ? (
                 <p className="bg-primary" style={{color:"white"}} id="blog-added">Successfully added blog</p>
             ) : (<p>Add blog</p>)}
